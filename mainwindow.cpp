@@ -88,7 +88,7 @@ void MainWindow::updateTime(){
 
 void MainWindow::getRecordFromSql(){
     QSqlQuery q (db);
-    q.prepare("SELECT * FROM datatable WHERE savedate = ? ");
+    q.prepare("SELECT * FROM datatable");
     q.exec();
     QSqlRecord rec = q.record();
     int hour = rec.indexOf("hour");
